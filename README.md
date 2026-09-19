@@ -1,4 +1,4 @@
-# EMEFast AI v3 — Apple Edition
+# EMEFast
 
 **Emergency Medical Fast Response System**
 
