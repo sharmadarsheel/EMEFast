@@ -1,0 +1,223 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient: Deep Charcoal #0B0D12 -->
+    <linearGradient id="bg-charcoal" x1="512" y1="0" x2="512" y2="1024" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#141720" />
+      <stop offset="40%" stop-color="#0E1017" />
+      <stop offset="100%" stop-color="#08090D" />
+    </linearGradient>
+
+    <!-- Top Specular Meniscus Glass Reflection -->
+    <radialGradient id="top-specular" cx="512" cy="0" r="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.22" />
+      <stop offset="45%" stop-color="#ffffff" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Lucid Frost Cross Gradient (Left) -->
+    <linearGradient id="frost-left" x1="300" y1="300" x2="480" y2="720" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="50%" stop-color="#F1F5F9" />
+      <stop offset="100%" stop-color="#CBD5E1" />
+    </linearGradient>
+
+    <!-- Luminous Red Cross Gradient (Right) -->
+    <linearGradient id="luminous-red" x1="450" y1="300" x2="650" y2="720" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF453A" />
+      <stop offset="40%" stop-color="#FF2D55" />
+      <stop offset="100%" stop-color="#D70015" />
+    </linearGradient>
+
+    <!-- Glass Bevel Rim Stroke -->
+    <linearGradient id="cross-rim-stroke" x1="300" y1="280" x2="600" y2="740" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.4" />
+    </linearGradient>
+
+    <!-- Speed Streak 1 Gradient -->
+    <linearGradient id="streak-grad-1" x1="660" y1="0" x2="880" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF3B30" stop-opacity="0.9" />
+      <stop offset="60%" stop-color="#FF453A" stop-opacity="0.55" />
+      <stop offset="100%" stop-color="#FF2D55" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Speed Streak 2 Gradient (Center) -->
+    <linearGradient id="streak-grad-2" x1="660" y1="0" x2="930" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF3B30" stop-opacity="1" />
+      <stop offset="70%" stop-color="#FF453A" stop-opacity="0.65" />
+      <stop offset="100%" stop-color="#FF2D55" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Speed Streak 3 Gradient -->
+    <linearGradient id="streak-grad-3" x1="660" y1="0" x2="850" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF3B30" stop-opacity="0.85" />
+      <stop offset="55%" stop-color="#FF453A" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#FF2D55" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Ambient Red Glow Filter (around ECG only) -->
+    <filter id="ecg-ambient-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="16" result="blur1" />
+      <feGaussianBlur in="SourceGraphic" stdDeviation="32" result="blur2" />
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="sharp" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="sharp" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Soft Glass Bevel Shadow -->
+    <filter id="glass-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000000" flood-opacity="0.55" />
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.35" />
+    </filter>
+
+    <!-- Outer Squircle Clip Path (28% radius = 286.72px) -->
+    <clipPath id="squircle-clip">
+      <rect x="0" y="0" width="1024" height="1024" rx="286.7" ry="286.7" />
+    </clipPath>
+
+    <!-- Medical Cross Path Definition -->
+    <!-- Centered around cx=460, cy=512.
+         Arm width: 146px. Arm reach: 146px from center block.
+         Total width: 438px (x=241 to 679).
+         Total height: 438px (y=293 to 731).
+         Corner radius: 46px.
+    -->
+    <path id="medical-cross-shape" d="
+      M 387 293
+      L 533 293
+      A 46 46 0 0 1 579 339
+      L 579 439
+      L 633 439
+      A 46 46 0 0 1 679 485
+      L 679 539
+      A 46 46 0 0 1 633 585
+      L 579 585
+      L 579 685
+      A 46 46 0 0 1 533 731
+      L 387 731
+      A 46 46 0 0 1 341 685
+      L 341 585
+      L 287 585
+      A 46 46 0 0 1 241 539
+      L 241 485
+      A 46 46 0 0 1 287 439
+      L 341 439
+      L 341 339
+      A 46 46 0 0 1 387 293
+      Z
+    " />
+
+    <clipPath id="cross-clip">
+      <use href="#medical-cross-shape" />
+    </clipPath>
+  </defs>
+
+  <!-- Base App Icon Container (Clipped to 28% Apple Squircle) -->
+  <g clip-path="url(#squircle-clip)">
+    <!-- Deep Charcoal Canvas Background -->
+    <rect width="1024" height="1024" fill="url(#bg-charcoal)" />
+
+    <!-- Top Specular Meniscus Reflection -->
+    <rect width="1024" height="1024" fill="url(#top-specular)" />
+
+    <!-- Ambient Subtle Core Glow behind cross -->
+    <circle cx="480" cy="512" r="260" fill="#FF3B30" opacity="0.08" filter="url(#ecg-ambient-glow)" />
+
+    <!-- 3 Red Speed Streaks on the Right -->
+    <g>
+      <!-- Streak 1 (Top) -->
+      <rect x="630" y="426" width="220" height="24" rx="12" fill="url(#streak-grad-1)" />
+      <!-- Streak 2 (Middle, longest) -->
+      <rect x="630" y="500" width="270" height="28" rx="14" fill="url(#streak-grad-2)" />
+      <!-- Streak 3 (Bottom) -->
+      <rect x="630" y="574" width="190" height="22" rx="11" fill="url(#streak-grad-3)" />
+    </g>
+
+    <!-- Medical Cross with Shadow -->
+    <g filter="url(#glass-shadow)">
+      <!-- Cross Fill (Clipped to Cross Shape) -->
+      <g clip-path="url(#cross-clip)">
+        <!-- Base frosted white on left -->
+        <rect x="230" y="280" width="460" height="460" fill="url(#frost-left)" />
+
+        <!-- Diagonal split luminous red on right (matching reference angle) -->
+        <path d="M 440 280 L 690 280 L 690 740 L 370 740 Z" fill="url(#luminous-red)" />
+
+        <!-- Internal specular gloss highlight on upper curves -->
+        <ellipse cx="460" cy="310" rx="160" ry="30" fill="#ffffff" opacity="0.45" />
+        <ellipse cx="300" cy="450" rx="40" ry="80" fill="#ffffff" opacity="0.35" />
+      </g>
+
+      <!-- Glass Bevel Rim Stroke -->
+      <use href="#medical-cross-shape" fill="none" stroke="url(#cross-rim-stroke)" stroke-width="3.5" />
+    </g>
+
+    <!-- === Luminous Red ECG Heartbeat Pulse Merged Through Center === -->
+    <!-- 1. Ambient Red Glow Under ECG (Red glow ONLY around ECG) -->
+    <path d="
+      M 241 512
+      L 395 512
+      L 415 540
+      L 455 330
+      L 495 694
+      L 528 472
+      L 550 512
+      L 679 512
+    "
+      fill="none"
+      stroke="#FF3B30"
+      stroke-width="32"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      opacity="0.85"
+      filter="url(#ecg-ambient-glow)"
+    />
+
+    <!-- 2. Mid Luminous Red Neon Core -->
+    <path d="
+      M 241 512
+      L 395 512
+      L 415 540
+      L 455 330
+      L 495 694
+      L 528 472
+      L 550 512
+      L 679 512
+    "
+      fill="none"
+      stroke="#FF453A"
+      stroke-width="18"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      opacity="0.95"
+    />
+
+    <!-- 3. Brilliant White Specular ECG Core -->
+    <path d="
+      M 241 512
+      L 395 512
+      L 415 540
+      L 455 330
+      L 495 694
+      L 528 472
+      L 550 512
+      L 679 512
+    "
+      fill="none"
+      stroke="#FFFFFF"
+      stroke-width="10"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <!-- Thin Translucent White Outer Border for App Icon Squircle -->
+    <rect x="1.25" y="1.25" width="1021.5" height="1021.5" rx="285.5" ry="285.5" fill="none" stroke="rgba(255, 255, 255, 0.22)" stroke-width="2.5" />
+    <!-- Inner specular rim highlight on border -->
+    <rect x="3.5" y="3.5" width="1017" height="1017" rx="283.5" ry="283.5" fill="none" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.5" />
+  </g>
+</svg>

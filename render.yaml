@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: emefast-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install --omit=dev
+    startCommand: node mock-server.mjs
+    healthCheckPath: /api/health
+    envVars:
+      - key: DEMO_MODE
+        value: "0"
+      - key: CORS_ORIGINS
+        sync: false

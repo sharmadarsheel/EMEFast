@@ -1,0 +1,27 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+!.env.local.example
+
+# Node dependencies and build
+node_modules/
+.next/
+.vercel/
+*.tsbuildinfo
+
+# Python artifacts
+*.py[cod]
+__pycache__/
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# App local data
+backend/emefast.db
+backend/uploads/
+*.log
+.DS_Store
+Thumbs.db

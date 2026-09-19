@@ -1,0 +1,51 @@
+EMEFast ALL-FIXED DEMO
+======================
+
+1) Put/install shared Node dependencies once:
+   Double-click setup_emefast_modules.bat
+
+   This installs dependencies ONLY in:
+   C:\Users\GITANSH-PC\Desktop\EMEFast_Modules\node_modules
+
+   The frontend folder does NOT need node_modules.
+
+2) Start the application:
+   Double-click start_emefast.bat
+
+   It starts:
+   - Demo API: http://localhost:8000
+   - Next frontend: http://localhost:3001
+
+3) Open:
+   http://localhost:3001
+
+4) Test roles from the top navigation:
+   Ambulance / Hospital / Admin
+
+5) Ambulance flow:
+   - Open emergency
+   - Allow GPS, OR explicitly choose "Use demo location (testing)" if GPS is unavailable
+   - Record voice note
+   - Stop and preview audio
+   - Submit emergency
+   - Voice note is uploaded to the API and shown in hospital inbox
+   - Hospital responses are broadcast to all 7 demo hospitals
+   - Two demo responses auto-accept after a short delay so Best Overall / Fastest / Lowest Cost can be demonstrated
+
+6) Hospital flow:
+   - Open Hospital workspace
+   - Choose a facility from the selector
+   - Incoming emergency queries appear automatically
+   - Pending cases can be Accepted or Declined
+   - Decline requires a reason
+   - Attached voice note is playable
+
+7) Map:
+   - Uses Leaflet + OpenStreetMap tiles
+   - Uses browser GPS when available
+   - Uses OSRM routing when a destination is available
+   - No silent GPS fallback; the only demo coordinates are activated by an explicit testing button
+
+8) Important:
+   This package's API is a local demonstration server. It is not a production hospital network.
+   Replace the demo API with authenticated production services before real-world deployment.
